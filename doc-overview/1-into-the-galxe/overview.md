@@ -5,13 +5,7 @@ slug: /
 ---
 # Overview
 
-Earn (Rewards, NFTs, OAT, tokens) by contributing to your favorite web3 community.
-
-Build and grow your Web3 community the authentic way. Reach, reward, and engage with millions of Web3 users through an easy, no-code solution and loyalty programs. Join Optimism, Polygon, Arbitrum, and 1800+ projects to start growing today!
-
-## Our Mission
-
-At Galxe, we are building the infrastructure to power an open and collaborative credential data network. We help Web3 developers leverage credential data to build better products and communities. At the same time, data curators contribute to our credential data network while earning income once the data is utilized.
+Galxe is the leading platform for building web3 community. With over 30 million users, Galxe has propelled the growth of Optimism, Polygon, Arbitrum, and more than 1800 partners with reward-based loyalty programs. Start your campaign today at [galxe.com](http://galxe.com/)!
 
 ## What are digital credentials
 
