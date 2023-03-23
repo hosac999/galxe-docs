@@ -5,7 +5,9 @@ slug: /
 ---
 # Overview
 
-Galxe is the leading Web3 credential data network in the world. A collaborative credential infrastructure enabling brands and developers to engage communities and build robust products in Web3.
+Earn (Rewards, NFTs, OAT, tokens) by contributing to your favorite web3 community.\
+\
+Build and grow your Web3 community the authentic way. Reach, reward, and engage with millions of Web3 users through an easy, no-code solution and loyalty programs. Join Optimism, Polygon, Arbitrum, and 1800+ projects to start growing today!
 
 ## Our Mission
 
@@ -19,7 +21,7 @@ Credentials are important due to the high use case they provide. Applications ca
 
 ## Problems with the current credential system
 
-Credential data today is segregated across closed databases that are owned and permissioned by applications, government organizations, and financial and credit institutions. This has led to a fractured landscape that is not open to the individuals who should own that data or the applications that need it. Galxe aims to solve this problem using an open and collaborative credential data network which will help Web3 developers leverage credential data to build better products and more engaging communities.
+Credential data today are segregated across closed databases that are owned and permissioned by applications, government organizations, and financial and credit institutions. This has led to a fractured landscape that is not open to the individuals who should own that data or the applications that need it. Galxe aims to solve this problem using an open and collaborative credential data network which will help Web3 developers leverage credential data to build better products and more engaging communities.
 
 ## Galxe Solution
 
@@ -27,7 +29,7 @@ Galxe aims to build an open and collaborative credential data network that is ac
 
 By contributing to Galxe’s Credential Data Network, curators are rewarded when credentials are used in Galxe’s Application Modules, Credential Oracle Engine, and Credential API. Because there are users consuming (paying to use) data in our ecosystem, this incentivizes more users to come curate for our data network.
 
-To this day, over 1,500 partners have already launched over 10,000 campaigns on Galxe. here are some case studies to provide more info:
+To this day, over 1,800 partners have already launched over 10,000 campaigns on Galxe. here are some case studies to provide more info:
 
 * **Bootstrapping Community**: [How Hashflow used Galxe to turbo-charge to $600M of trading volume](../4-case-studies/1-hashflow.md)
 * **Customized Voting System**: [How Galxe Powered Customized Voting Strategy for MVB Program](https://www.binance.org/en/blog/mvbiii-forming-a-voting-committee-to-bring-decentralization-into-the-mvb-program/)
