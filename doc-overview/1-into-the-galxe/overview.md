@@ -5,8 +5,8 @@ slug: /
 ---
 # Overview
 
-Earn (Rewards, NFTs, OAT, tokens) by contributing to your favorite web3 community.\
-\
+Earn (Rewards, NFTs, OAT, tokens) by contributing to your favorite web3 community.
+
 Build and grow your Web3 community the authentic way. Reach, reward, and engage with millions of Web3 users through an easy, no-code solution and loyalty programs. Join Optimism, Polygon, Arbitrum, and 1800+ projects to start growing today!
 
 ## Our Mission
@@ -44,7 +44,7 @@ With Galxe Credentials, we will be able to build a Web3 DID system that not only
 
 ## Build with Galxe
 
-If you want to contribute credentials to the Galxe data network, or leverage Galxe Credentials in our product/community, you can apply for access for Closed Beta [here](https://gal.xyz/application). We are also hiring! If you are interested in becoming part of the history in building Web3 Credential Data Network, check out our job openings [here](https://gal.xyz/careers). We are super excited for the journey ahead.
+If you want to contribute credentials to the Galxe data network, or leverage Galxe Credentials in our product/community, you can apply for access for Closed Beta [here](https://gal.xyz/application). We are also hiring! If you are interested in becoming part of the history of building Web3 Credential Data Network, check out our job openings [here](https://gal.xyz/careers). We are super excited for the journey ahead.
 
 ## Join Galxe Community
 
