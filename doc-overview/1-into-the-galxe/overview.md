@@ -5,7 +5,7 @@ slug: /
 ---
 # Overview
 
-Galxe is the leading platform for building web3 community. With over 30 million users, Galxe has propelled the growth of Optimism, Polygon, Arbitrum, and more than 1800 partners with reward-based loyalty programs. Start your campaign today at [galxe.com](http://galxe.com/)!
+Galxe is the leading platform for building web3 community. With over 65 million users, Galxe has propelled the growth of Optimism, Polygon, Arbitrum, and more than 2100 partners with reward-based loyalty programs. Start your campaign today at [galxe.com](http://galxe.com/)!
 
 ## What are digital credentials
 
@@ -23,7 +23,7 @@ Galxe aims to build an open and collaborative credential data network that is ac
 
 By contributing to Galxe’s Credential Data Network, curators are rewarded when credentials are used in Galxe’s Application Modules, Credential Oracle Engine, and Credential API. Because there are users consuming (paying to use) data in our ecosystem, this incentivizes more users to come curate for our data network.
 
-To this day, over 1,800 partners have already launched over 10,000 campaigns on Galxe. here are some case studies to provide more info:
+To this day, over 2,100 partners have already launched over 10,000 campaigns on Galxe. here are some case studies to provide more info:
 
 * **Bootstrapping Community**: [How Hashflow used Galxe to turbo-charge to $600M of trading volume](../4-case-studies/1-hashflow.md)
 * **Customized Voting System**: [How Galxe Powered Customized Voting Strategy for MVB Program](https://www.binance.org/en/blog/mvbiii-forming-a-voting-committee-to-bring-decentralization-into-the-mvb-program/)
