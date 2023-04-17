@@ -1,0 +1,67 @@
+---
+id: claimed-loyalty-points
+title: ClaimedLoyaltyPoints
+---
+
+
+No description
+
+```graphql
+type ClaimedLoyaltyPoints implements Node {
+  id: ID!
+  address: Address
+  space: Space
+  points: Int!
+  campaign: Campaign
+  claimedAt: Int!
+  type: ClaimLoyaltyPointsType!
+}
+```
+
+
+### Fields
+
+#### `id` ([`ID`](../../references/scalars/id))
+
+
+
+
+#### `address` ([`Address`](../../references/objects/address))
+
+
+
+
+#### `space` ([`Space`](../../references/objects/space))
+
+
+
+
+#### `points` ([`Int`](../../references/scalars/int))
+
+
+
+
+#### `campaign` ([`Campaign`](../../references/objects/campaign))
+
+
+
+
+#### `claimedAt` ([`Int`](../../references/scalars/int))
+
+
+
+
+#### `type` ([`ClaimLoyaltyPointsType`](../../references/enums/claim-loyalty-points-type))
+
+
+
+
+### Interfaces
+
+#### [`Node`](../../references/interfaces/node) 
+
+
+
+
+
+

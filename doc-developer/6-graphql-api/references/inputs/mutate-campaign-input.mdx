@@ -18,14 +18,21 @@ input MutateCampaignInput {
   endTime: Int
   status: CampaignStatus!
   parentId: Int
-  formula: String!
+  formula: String
   cap: Int!
+  tokenReward: TokenRewardInput
   gasType: GasType!
   isPrivate: Boolean!
   type: GamificationType!
   nftTemplates: [NFTTemplateInput!]
   children: [Int!]
   chain: Chain
+  requireIntegrate: Boolean
+  distributionType: DistributionType
+  rewardName: String
+  rewardType: RewardType
+  rewardInfo: RewardInfoInput
+  credentialGroups: [CredentialGroupInput!]
 }
 ```
 
@@ -92,6 +99,11 @@ input MutateCampaignInput {
 
 
 
+#### `tokenReward` ([`TokenRewardInput`](../../references/inputs/token-reward-input))
+
+
+
+
 #### `gasType` ([`GasType`](../../references/enums/gas-type))
 
 
@@ -118,6 +130,36 @@ input MutateCampaignInput {
 
 
 #### `chain` ([`Chain`](../../references/enums/chain))
+
+
+
+
+#### `requireIntegrate` ([`Boolean`](../../references/scalars/boolean))
+
+
+
+
+#### `distributionType` ([`DistributionType`](../../references/enums/distribution-type))
+
+
+
+
+#### `rewardName` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `rewardType` ([`RewardType`](../../references/enums/reward-type))
+
+
+
+
+#### `rewardInfo` ([`RewardInfoInput`](../../references/inputs/reward-info-input))
+
+
+
+
+#### `credentialGroups` ([`CredentialGroupInput`](../../references/inputs/credential-group-input))
 
 
 

@@ -19,13 +19,22 @@ type Campaign implements Node {
   gasType: GasType!
   startTime: Int
   endTime: Int
+  claimEndTime: Int
   parentCampaign: Campaign
   childrenCampaigns: [Campaign!]
   holders(
   first: Int
   after: String
 ): AddressConnection!
+  holdersList(
+  first: Int
+  after: String
+): [String!]
+  holdersCount: Int!
+  nftHolderSnapshot: CampaignNFTHolderSnapshot!
   cap: Int!
+  tokenReward: TokenReward!
+  tokenRewardContract: TokenRewardContract
   blacklistCountryCodes: String!
   createdAt: String!
   space: Space!
@@ -51,12 +60,37 @@ type Campaign implements Node {
   address: String!
 ): Boolean!
   whitelistRegions: String
+  requireIntegrate: Boolean
+  participants: CampaignParticipant!
+  distributionType: DistributionType
+  rewardName: String
+  rewardType: RewardType
+  rewardInfo: RewardInfo!
+  userParticipants(
+  address: String!
+  first: Int
+  after: String = ""
+): ParticipationConnection!
+  participationStatus(
+  address: String!
+): ParticipationStatus
+  isNFTHolder(
+  address: String!
+): Boolean!
+  metrics: String!
+  loyaltyPoints: Int!
+  credentialGroups(
+  address: String
+): [CredentialGroup!]!
   useCred: Boolean!
   claimedTimes(
   address: String!
 ): Int!
   formula: String!
   creds: [Cred!]!
+  claimedLoyaltyPoints(
+  address: String!
+): Int!
 }
 ```
 
@@ -118,6 +152,11 @@ type Campaign implements Node {
 
 
 
+#### `claimEndTime` ([`Int`](../../references/scalars/int))
+
+
+
+
 #### `parentCampaign` ([`Campaign`](../../references/objects/campaign))
 
 
@@ -141,7 +180,40 @@ type Campaign implements Node {
 
 
 
+#### `holdersList` ([`String`](../../references/scalars/string))
+
+
+- ##### `first` ([`Int`](../../references/scalars/int))
+
+
+
+
+- ##### `after` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `holdersCount` ([`Int`](../../references/scalars/int))
+
+
+
+
+#### `nftHolderSnapshot` ([`CampaignNFTHolderSnapshot`](../../references/objects/campaign-nftholder-snapshot))
+
+
+
+
 #### `cap` ([`Int`](../../references/scalars/int))
+
+
+
+
+#### `tokenReward` ([`TokenReward`](../../references/objects/token-reward))
+
+
+
+
+#### `tokenRewardContract` ([`TokenRewardContract`](../../references/objects/token-reward-contract))
 
 
 
@@ -257,6 +329,88 @@ type Campaign implements Node {
 
 
 
+#### `requireIntegrate` ([`Boolean`](../../references/scalars/boolean))
+
+
+
+
+#### `participants` ([`CampaignParticipant`](../../references/objects/campaign-participant))
+
+
+
+
+#### `distributionType` ([`DistributionType`](../../references/enums/distribution-type))
+
+
+
+
+#### `rewardName` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `rewardType` ([`RewardType`](../../references/enums/reward-type))
+
+
+
+
+#### `rewardInfo` ([`RewardInfo`](../../references/objects/reward-info))
+
+
+
+
+#### `userParticipants` ([`ParticipationConnection`](../../references/objects/participation-connection))
+
+
+- ##### `address` ([`String`](../../references/scalars/string))
+
+
+
+
+- ##### `first` ([`Int`](../../references/scalars/int))
+
+
+
+
+- ##### `after` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `participationStatus` ([`ParticipationStatus`](../../references/enums/participation-status))
+
+
+- ##### `address` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `isNFTHolder` ([`Boolean`](../../references/scalars/boolean))
+
+
+- ##### `address` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `metrics` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `loyaltyPoints` ([`Int`](../../references/scalars/int))
+
+
+
+
+#### `credentialGroups` ([`CredentialGroup`](../../references/objects/credential-group))
+
+
+- ##### `address` ([`String`](../../references/scalars/string))
+
+
+
+
 #### `useCred` ([`Boolean`](../../references/scalars/boolean))
 
 
@@ -276,6 +430,14 @@ type Campaign implements Node {
 
 
 #### `creds` ([`Cred`](../../references/objects/cred))
+
+
+
+
+#### `claimedLoyaltyPoints` ([`Int`](../../references/scalars/int))
+
+
+- ##### `address` ([`String`](../../references/scalars/string))
 
 
 

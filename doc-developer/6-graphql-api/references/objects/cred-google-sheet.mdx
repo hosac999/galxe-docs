@@ -11,6 +11,7 @@ type CredGoogleSheet {
   sourceConfig: PollerConnectionSourceConfigGoogleSheet!
   transformationConfig: PollerConnectionTransformationConfigGoogleSheet!
   frequency: String!
+  status: PollerConnectionStatus!
 }
 ```
 
@@ -28,6 +29,11 @@ type CredGoogleSheet {
 
 
 #### `frequency` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `status` ([`PollerConnectionStatus`](../../references/enums/poller-connection-status))
 
 
 

@@ -11,12 +11,14 @@ input ListCredInput {
   ids: [ID!]
   listType: ListType
   searchString: String
-  userAddr: String
   spaceId: Int
   types: [CredType!]
   chains: [Chain!]
   first: Int
   after: String
+  tabType: CredTabType
+  createdByAdmin: Boolean
+  orderByUsed: Boolean
 }
 ```
 
@@ -34,11 +36,6 @@ input ListCredInput {
 
 
 #### `searchString` ([`String`](../../references/scalars/string))
-
-
-
-
-#### `userAddr` ([`String`](../../references/scalars/string))
 
 
 
@@ -64,6 +61,21 @@ input ListCredInput {
 
 
 #### `after` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `tabType` ([`CredTabType`](../../references/enums/cred-tab-type))
+
+
+
+
+#### `createdByAdmin` ([`Boolean`](../../references/scalars/boolean))
+
+
+
+
+#### `orderByUsed` ([`Boolean`](../../references/scalars/boolean))
 
 
 

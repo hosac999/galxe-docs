@@ -1,0 +1,78 @@
+---
+id: sprint
+title: Sprint
+---
+
+
+No description
+
+```graphql
+type Sprint implements Node {
+  id: ID!
+  space: Space!
+  name: String!
+  startTime: Int!
+  endTime: Int!
+  isVisible: Boolean!
+  leaderboard(
+  first: Int
+  after: String
+): LoyaltyPointsRankConnection!
+}
+```
+
+
+### Fields
+
+#### `id` ([`ID`](../../references/scalars/id))
+
+
+
+
+#### `space` ([`Space`](../../references/objects/space))
+
+
+
+
+#### `name` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `startTime` ([`Int`](../../references/scalars/int))
+
+
+
+
+#### `endTime` ([`Int`](../../references/scalars/int))
+
+
+
+
+#### `isVisible` ([`Boolean`](../../references/scalars/boolean))
+
+
+
+
+#### `leaderboard` ([`LoyaltyPointsRankConnection`](../../references/objects/loyalty-points-rank-connection))
+
+
+- ##### `first` ([`Int`](../../references/scalars/int))
+
+
+
+
+- ##### `after` ([`String`](../../references/scalars/string))
+
+
+
+
+### Interfaces
+
+#### [`Node`](../../references/interfaces/node) 
+
+
+
+
+
+

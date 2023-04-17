@@ -1,0 +1,53 @@
+---
+id: campaign-nftholder-snapshot
+title: CampaignNFTHolderSnapshot
+---
+
+
+No description
+
+```graphql
+type CampaignNFTHolderSnapshot {
+  holders(
+  block: Int!
+  first: Int
+  after: String = ""
+): SnapshotNFTConnection!
+  holderSnapshotBlock: Int!
+  holdersCount: Int!
+}
+```
+
+
+### Fields
+
+#### `holders` ([`SnapshotNFTConnection`](../../references/objects/snapshot-nftconnection))
+
+
+- ##### `block` ([`Int`](../../references/scalars/int))
+
+
+
+
+- ##### `first` ([`Int`](../../references/scalars/int))
+
+
+
+
+- ##### `after` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `holderSnapshotBlock` ([`Int`](../../references/scalars/int))
+
+
+
+
+#### `holdersCount` ([`Int`](../../references/scalars/int))
+
+
+
+
+
+

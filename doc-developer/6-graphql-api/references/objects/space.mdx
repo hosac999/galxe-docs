@@ -28,6 +28,50 @@ type Space implements Node {
   credentials(
   input: ListCredInput!
 ): CredConnection!
+  categories: [String!]!
+  chains: [Chain!]!
+  status: SpaceStatus!
+  twitterUserID: String!
+  twitterUserName: String!
+  token: String!
+  backers: String!
+  discordGuildID: String!
+  discordGuildInfo: String!
+  metrics: String!
+  isFollowing: Boolean!
+  followersCount: Int!
+  spaceBalance: SpaceBalance!
+  spacePayments(
+  input: SpacePaymentsInput!
+): SpacePaymentConnection!
+  spaceExpenses(
+  input: SpaceExpensesInput!
+): SpaceExpenseConnection!
+  spaceTwitter: TwitterUser!
+  spaceGuild: GuildPreview!
+  loyaltyPointsRanks(
+  first: Int
+  after: String
+): LoyaltyPointsRankConnection!
+  addressLoyaltyPoints(
+  address: String!
+): LoyaltyPointsRank!
+  addressesLoyaltyPoints(
+  addresses: [String!]!
+  snapshotId: String
+): [AddressLoyaltyPoints!]!
+  sprints(
+  first: Int
+  after: String
+  isAdminView: Boolean
+): SprintConnection!
+  userSprintRank(
+  sprintId: Int!
+  address: String!
+): LoyaltyPointsRank!
+  unclaimedBackfillLoyaltyPoints(
+  address: String!
+): Int!
 }
 ```
 
@@ -102,6 +146,170 @@ type Space implements Node {
 
 
 - ##### `input` ([`ListCredInput`](../../references/inputs/list-cred-input))
+
+
+
+
+#### `categories` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `chains` ([`Chain`](../../references/enums/chain))
+
+
+
+
+#### `status` ([`SpaceStatus`](../../references/enums/space-status))
+
+
+
+
+#### `twitterUserID` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `twitterUserName` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `token` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `backers` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `discordGuildID` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `discordGuildInfo` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `metrics` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `isFollowing` ([`Boolean`](../../references/scalars/boolean))
+
+
+
+
+#### `followersCount` ([`Int`](../../references/scalars/int))
+
+
+
+
+#### `spaceBalance` ([`SpaceBalance`](../../references/objects/space-balance))
+
+
+
+
+#### `spacePayments` ([`SpacePaymentConnection`](../../references/objects/space-payment-connection))
+
+
+- ##### `input` ([`SpacePaymentsInput`](../../references/inputs/space-payments-input))
+
+
+
+
+#### `spaceExpenses` ([`SpaceExpenseConnection`](../../references/objects/space-expense-connection))
+
+
+- ##### `input` ([`SpaceExpensesInput`](../../references/inputs/space-expenses-input))
+
+
+
+
+#### `spaceTwitter` ([`TwitterUser`](../../references/objects/twitter-user))
+
+
+
+
+#### `spaceGuild` ([`GuildPreview`](../../references/objects/guild-preview))
+
+
+
+
+#### `loyaltyPointsRanks` ([`LoyaltyPointsRankConnection`](../../references/objects/loyalty-points-rank-connection))
+
+
+- ##### `first` ([`Int`](../../references/scalars/int))
+
+
+
+
+- ##### `after` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `addressLoyaltyPoints` ([`LoyaltyPointsRank`](../../references/objects/loyalty-points-rank))
+
+
+- ##### `address` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `addressesLoyaltyPoints` ([`AddressLoyaltyPoints`](../../references/objects/address-loyalty-points))
+
+
+- ##### `addresses` ([`String`](../../references/scalars/string))
+
+
+
+
+- ##### `snapshotId` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `sprints` ([`SprintConnection`](../../references/objects/sprint-connection))
+
+
+- ##### `first` ([`Int`](../../references/scalars/int))
+
+
+
+
+- ##### `after` ([`String`](../../references/scalars/string))
+
+
+
+
+- ##### `isAdminView` ([`Boolean`](../../references/scalars/boolean))
+
+
+
+
+#### `userSprintRank` ([`LoyaltyPointsRank`](../../references/objects/loyalty-points-rank))
+
+
+- ##### `sprintId` ([`Int`](../../references/scalars/int))
+
+
+
+
+- ##### `address` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `unclaimedBackfillLoyaltyPoints` ([`Int`](../../references/scalars/int))
+
+
+- ##### `address` ([`String`](../../references/scalars/string))
 
 
 

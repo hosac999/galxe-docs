@@ -14,6 +14,7 @@ type PollerConnection {
   transformationConfig: PollerConnectionTransformationConfig!
   destinationCredId: ID!
   frequency: String!
+  status: PollerConnectionStatus!
 }
 ```
 
@@ -46,6 +47,11 @@ type PollerConnection {
 
 
 #### `frequency` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `status` ([`PollerConnectionStatus`](../../references/enums/poller-connection-status))
 
 
 

@@ -1,0 +1,76 @@
+---
+id: campaign-participant
+title: CampaignParticipant
+---
+
+
+No description
+
+```graphql
+type CampaignParticipant {
+  participantsCount: Int!
+  participants(
+  first: Int
+  after: String = ""
+  download: Boolean! = "false"
+): AddressConnection!
+  bountyWinnersCount: Int!
+  bountyWinners(
+  first: Int
+  after: String = ""
+  download: Boolean! = "false"
+): AddressConnection!
+}
+```
+
+
+### Fields
+
+#### `participantsCount` ([`Int`](../../references/scalars/int))
+
+
+
+
+#### `participants` ([`AddressConnection`](../../references/objects/address-connection))
+
+
+- ##### `first` ([`Int`](../../references/scalars/int))
+
+
+
+
+- ##### `after` ([`String`](../../references/scalars/string))
+
+
+
+
+- ##### `download` ([`Boolean`](../../references/scalars/boolean))
+
+
+
+
+#### `bountyWinnersCount` ([`Int`](../../references/scalars/int))
+
+
+
+
+#### `bountyWinners` ([`AddressConnection`](../../references/objects/address-connection))
+
+
+- ##### `first` ([`Int`](../../references/scalars/int))
+
+
+
+
+- ##### `after` ([`String`](../../references/scalars/string))
+
+
+
+
+- ##### `download` ([`Boolean`](../../references/scalars/boolean))
+
+
+
+
+
+

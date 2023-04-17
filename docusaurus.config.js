@@ -261,11 +261,11 @@ const config = {
     [
       "@edno/docusaurus2-graphql-doc-generator",
       {
-        schema: "https://graphigo.prd.galxe.com/query",
+        schema: "https://graphigo.prd.galaxy.eco/query",
         // docs will be generated under rootPath/baseURL
-        rootPath: "./doc-developer/4-graphql-api",
+        rootPath: "./doc-developer/6-graphql-api",
         baseURL: "references",
-        // needed because we use 4-graphql-api with alias graphql-api
+        // needed because we use 6-graphql-api with alias graphql-api
         linkRoot: "../..",
         loaders: {
           UrlLoader: "@graphql-tools/url-loader",

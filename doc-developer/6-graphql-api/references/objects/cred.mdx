@@ -13,7 +13,6 @@ type Cred {
   description: String!
   chain: Chain!
   type: String!
-  curatorAddress: String!
   referenceLink: String!
   eligible(
   address: String!
@@ -23,14 +22,16 @@ type Cred {
 ): Int!
   itemCount: Int!
   subgraph: CredSubgraph
-  items(
-  first: Int = 20
+  credentialItems(
+  first: Int = 1000
   after: String = ""
   searchString: String = ""
 ): CredItemConnection!
   lastUpdate: Int!
   syncRate: Float!
   lastSyncedBlock: Int!
+  syncStatus: SyncStatus!
+  credVersion: CredVersion!
   credType: CredType!
   credSource: CredSource!
   credDiscordAMA: CredDiscordAMA
@@ -40,6 +41,18 @@ type Cred {
   credGraphQL: CredGraphQL
   credSubgraph: CredSubgraph
   credGoogleSheet: CredGoogleSheet
+  credCampaignNFTHolder: CredCampaignNFTHolder
+  credContractNFTHolder: CredContractNFTHolder
+  credGithubContributor: CredGithubContributor
+  credDynamicContractNFTHolder: CredDynamicContractNFTHolder
+  credDynamicCampaignNFTHolder: CredDynamicCampaignNFTHolder
+  credDiscordMessage: CredDiscordMessage
+  credQuiz: CredQuiz
+  curatorSpaceID: Int!
+  curatorSpace: Space!
+  multiDimensionCredConfig: MultiDimensionCredConfig
+  credValueSchema: String
+  credValueData: String
 }
 ```
 
@@ -67,11 +80,6 @@ type Cred {
 
 
 #### `type` ([`String`](../../references/scalars/string))
-
-
-
-
-#### `curatorAddress` ([`String`](../../references/scalars/string))
 
 
 
@@ -107,7 +115,7 @@ type Cred {
 
 
 
-#### `items` ([`CredItemConnection`](../../references/objects/cred-item-connection))
+#### `credentialItems` ([`CredItemConnection`](../../references/objects/cred-item-connection))
 
 
 - ##### `first` ([`Int`](../../references/scalars/int))
@@ -136,6 +144,16 @@ type Cred {
 
 
 #### `lastSyncedBlock` ([`Int`](../../references/scalars/int))
+
+
+
+
+#### `syncStatus` ([`SyncStatus`](../../references/enums/sync-status))
+
+
+
+
+#### `credVersion` ([`CredVersion`](../../references/enums/cred-version))
 
 
 
@@ -181,6 +199,66 @@ type Cred {
 
 
 #### `credGoogleSheet` ([`CredGoogleSheet`](../../references/objects/cred-google-sheet))
+
+
+
+
+#### `credCampaignNFTHolder` ([`CredCampaignNFTHolder`](../../references/objects/cred-campaign-nftholder))
+
+
+
+
+#### `credContractNFTHolder` ([`CredContractNFTHolder`](../../references/objects/cred-contract-nftholder))
+
+
+
+
+#### `credGithubContributor` ([`CredGithubContributor`](../../references/objects/cred-github-contributor))
+
+
+
+
+#### `credDynamicContractNFTHolder` ([`CredDynamicContractNFTHolder`](../../references/objects/cred-dynamic-contract-nftholder))
+
+
+
+
+#### `credDynamicCampaignNFTHolder` ([`CredDynamicCampaignNFTHolder`](../../references/objects/cred-dynamic-campaign-nftholder))
+
+
+
+
+#### `credDiscordMessage` ([`CredDiscordMessage`](../../references/objects/cred-discord-message))
+
+
+
+
+#### `credQuiz` ([`CredQuiz`](../../references/objects/cred-quiz))
+
+
+
+
+#### `curatorSpaceID` ([`Int`](../../references/scalars/int))
+
+
+
+
+#### `curatorSpace` ([`Space`](../../references/objects/space))
+
+
+
+
+#### `multiDimensionCredConfig` ([`MultiDimensionCredConfig`](../../references/objects/multi-dimension-cred-config))
+
+
+
+
+#### `credValueSchema` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `credValueData` ([`String`](../../references/scalars/string))
 
 
 

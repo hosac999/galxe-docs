@@ -8,7 +8,7 @@ No description
 
 ```graphql
 input UpdateProfileInput {
-  sig: String!
+  sig: String
   address: String!
   username: String!
   avatar: String!
@@ -16,6 +16,7 @@ input UpdateProfileInput {
   displayTwitter: Boolean
   displayDiscord: Boolean
   displayGithub: Boolean
+  displayNamePref: DisplayNamePrefType
 }
 ```
 
@@ -58,6 +59,11 @@ input UpdateProfileInput {
 
 
 #### `displayGithub` ([`Boolean`](../../references/scalars/boolean))
+
+
+
+
+#### `displayNamePref` ([`DisplayNamePrefType`](../../references/enums/display-name-pref-type))
 
 
 

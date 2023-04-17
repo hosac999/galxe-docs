@@ -16,7 +16,13 @@ input MutateSpaceInput {
   weight: Int!
   status: SpaceStatus!
   links: String!
-  admins: [String!]
+  captcha: CaptchaInput
+  categories: [String!]
+  chains: [Chain!]
+  twitterUserID: String!
+  twitterUserName: String!
+  token: String
+  backers: String
 }
 ```
 
@@ -63,7 +69,37 @@ input MutateSpaceInput {
 
 
 
-#### `admins` ([`String`](../../references/scalars/string))
+#### `captcha` ([`CaptchaInput`](../../references/inputs/captcha-input))
+
+
+
+
+#### `categories` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `chains` ([`Chain`](../../references/enums/chain))
+
+
+
+
+#### `twitterUserID` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `twitterUserName` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `token` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `backers` ([`String`](../../references/scalars/string))
 
 
 

@@ -22,6 +22,16 @@ input ListCampaignInput {
   forAdmin: Boolean
   bookmarkedBy: String
   claimableByUser: String
+  credSources: [CredSource!]
+  spaceCategories: [String!]
+  gasTypes: [GasType!]
+  backers: [String!]
+  relatedByAddr: String
+  excludeChildren: Boolean
+  excludeParent: Boolean
+  orderByTokenValue: Boolean
+  startTimeLastWeek: Boolean
+  spaceId: ID
 }
 ```
 
@@ -94,6 +104,56 @@ input ListCampaignInput {
 
 
 #### `claimableByUser` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `credSources` ([`CredSource`](../../references/enums/cred-source))
+
+
+
+
+#### `spaceCategories` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `gasTypes` ([`GasType`](../../references/enums/gas-type))
+
+
+
+
+#### `backers` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `relatedByAddr` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `excludeChildren` ([`Boolean`](../../references/scalars/boolean))
+
+
+
+
+#### `excludeParent` ([`Boolean`](../../references/scalars/boolean))
+
+
+
+
+#### `orderByTokenValue` ([`Boolean`](../../references/scalars/boolean))
+
+
+
+
+#### `startTimeLastWeek` ([`Boolean`](../../references/scalars/boolean))
+
+
+
+
+#### `spaceId` ([`ID`](../../references/scalars/id))
 
 
 

@@ -1,0 +1,59 @@
+---
+id: space-balance
+title: SpaceBalance
+---
+
+
+No description
+
+```graphql
+type SpaceBalance {
+  spaceId: Int!
+  balance: Int!
+  total_quota: Int!
+  quotas: [SpaceQuota]!
+  sufficientForGaslessClaimOnChain(
+  chains: [Chain!]!
+): [SpaceBalanceSufficiency]!
+  subsidies: [SpaceSubsidy]!
+}
+```
+
+
+### Fields
+
+#### `spaceId` ([`Int`](../../references/scalars/int))
+
+
+
+
+#### `balance` ([`Int`](../../references/scalars/int))
+
+
+
+
+#### `total_quota` ([`Int`](../../references/scalars/int))
+
+
+
+
+#### `quotas` ([`SpaceQuota`](../../references/objects/space-quota))
+
+
+
+
+#### `sufficientForGaslessClaimOnChain` ([`SpaceBalanceSufficiency`](../../references/objects/space-balance-sufficiency))
+
+
+- ##### `chains` ([`Chain`](../../references/enums/chain))
+
+
+
+
+#### `subsidies` ([`SpaceSubsidy`](../../references/objects/space-subsidy))
+
+
+
+
+
+

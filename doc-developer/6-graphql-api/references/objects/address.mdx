@@ -11,12 +11,25 @@ type Address {
   id: String!
   address: String!
   solanaAddress: String!
+  aptosAddress: String!
   username: String!
   avatar: String!
+  hasEvmAddress: Boolean!
+  hasSolanaAddress: Boolean!
+  hasAptosAddress: Boolean!
   hasEmail: Boolean!
   hasTwitter: Boolean!
   hasGithub: Boolean!
   hasDiscord: Boolean!
+  displayEmail: Boolean!
+  displayTwitter: Boolean!
+  displayGithub: Boolean!
+  displayDiscord: Boolean!
+  hasPassport: Boolean!
+  passportStatus: PassportStatus!
+  passportPendingRedactAt: Int
+  passportID: String!
+  passport: AddressPassport!
   email: String!
   twitterUserID: String!
   twitterUserName: String!
@@ -26,10 +39,14 @@ type Address {
   discordUserName: String!
   accessToken: String!
   participatedCampaignIDs: [Int!]
+  participatedCampaigns(
+  first: Int = 10
+  after: String = ""
+): CampaignConnection!
   private(
-  sig: String!
+  sig: String
 ): PrivateInfo!
-  eligibleCredentials(
+  addressEligibleCredentials(
   first: Int
   after: String = ""
 ): CredConnection!
@@ -40,13 +57,44 @@ type Address {
   spaces(
   input: ListSpaceInput
 ): SpaceConnection!
+  spacesFollowing(
+  first: Int
+  after: String
+): SpaceConnection!
   credentials(
   input: ListCredInput
 ): CredConnection!
   bookmarks: [Bookmark!]
   isVerified: Boolean!
   isWhitelisted: Boolean!
+  isInvited: Boolean!
+  isAdmin: Boolean!
   isVerifiedTwitterOauth2: Boolean!
+  subscriptions: [SubscriptionType!]
+  displayNamePref: DisplayNamePrefType!
+  isVerifiedDiscordOauth2: Boolean!
+  enableEmailSubs: Boolean!
+  recap: String!
+  secondaryAccounts(
+  type: AddressType
+): [String!]
+  isChannelMember(
+  channelId: String!
+): Boolean!
+  loyaltyPointsRanks(
+  first: Int
+  after: String
+): LoyaltyPointsRankConnection!
+  recentlyClaimedLoyaltyPointsRecords(
+  spaceId: Int
+  first: Int
+  after: String
+): ClaimedLoyaltyPointsConnection!
+  recentlyClaimedLoyaltyPointsSpaces(
+  first: Int
+  after: String
+  searchString: String
+): SpaceConnection!
   nfts(
   option: ListNFTInput!
 ): NFTConnection!
@@ -77,12 +125,32 @@ type Address {
 
 
 
+#### `aptosAddress` ([`String`](../../references/scalars/string))
+
+
+
+
 #### `username` ([`String`](../../references/scalars/string))
 
 
 
 
 #### `avatar` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `hasEvmAddress` ([`Boolean`](../../references/scalars/boolean))
+
+
+
+
+#### `hasSolanaAddress` ([`Boolean`](../../references/scalars/boolean))
+
+
+
+
+#### `hasAptosAddress` ([`Boolean`](../../references/scalars/boolean))
 
 
 
@@ -103,6 +171,51 @@ type Address {
 
 
 #### `hasDiscord` ([`Boolean`](../../references/scalars/boolean))
+
+
+
+
+#### `displayEmail` ([`Boolean`](../../references/scalars/boolean))
+
+
+
+
+#### `displayTwitter` ([`Boolean`](../../references/scalars/boolean))
+
+
+
+
+#### `displayGithub` ([`Boolean`](../../references/scalars/boolean))
+
+
+
+
+#### `displayDiscord` ([`Boolean`](../../references/scalars/boolean))
+
+
+
+
+#### `hasPassport` ([`Boolean`](../../references/scalars/boolean))
+
+
+
+
+#### `passportStatus` ([`PassportStatus`](../../references/enums/passport-status))
+
+
+
+
+#### `passportPendingRedactAt` ([`Int`](../../references/scalars/int))
+
+
+
+
+#### `passportID` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `passport` ([`AddressPassport`](../../references/objects/address-passport))
 
 
 
@@ -152,6 +265,19 @@ type Address {
 
 
 
+#### `participatedCampaigns` ([`CampaignConnection`](../../references/objects/campaign-connection))
+
+
+- ##### `first` ([`Int`](../../references/scalars/int))
+
+
+
+
+- ##### `after` ([`String`](../../references/scalars/string))
+
+
+
+
 #### `private` ([`PrivateInfo`](../../references/objects/private-info))
 
 
@@ -160,7 +286,7 @@ type Address {
 
 
 
-#### `eligibleCredentials` ([`CredConnection`](../../references/objects/cred-connection))
+#### `addressEligibleCredentials` ([`CredConnection`](../../references/objects/cred-connection))
 
 
 - ##### `first` ([`Int`](../../references/scalars/int))
@@ -194,6 +320,19 @@ type Address {
 
 
 
+#### `spacesFollowing` ([`SpaceConnection`](../../references/objects/space-connection))
+
+
+- ##### `first` ([`Int`](../../references/scalars/int))
+
+
+
+
+- ##### `after` ([`String`](../../references/scalars/string))
+
+
+
+
 #### `credentials` ([`CredConnection`](../../references/objects/cred-connection))
 
 
@@ -217,7 +356,107 @@ type Address {
 
 
 
+#### `isInvited` ([`Boolean`](../../references/scalars/boolean))
+
+
+
+
+#### `isAdmin` ([`Boolean`](../../references/scalars/boolean))
+
+
+
+
 #### `isVerifiedTwitterOauth2` ([`Boolean`](../../references/scalars/boolean))
+
+
+
+
+#### `subscriptions` ([`SubscriptionType`](../../references/enums/subscription-type))
+
+
+
+
+#### `displayNamePref` ([`DisplayNamePrefType`](../../references/enums/display-name-pref-type))
+
+
+
+
+#### `isVerifiedDiscordOauth2` ([`Boolean`](../../references/scalars/boolean))
+
+
+
+
+#### `enableEmailSubs` ([`Boolean`](../../references/scalars/boolean))
+
+
+
+
+#### `recap` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `secondaryAccounts` ([`String`](../../references/scalars/string))
+
+
+- ##### `type` ([`AddressType`](../../references/enums/address-type))
+
+
+
+
+#### `isChannelMember` ([`Boolean`](../../references/scalars/boolean))
+
+
+- ##### `channelId` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `loyaltyPointsRanks` ([`LoyaltyPointsRankConnection`](../../references/objects/loyalty-points-rank-connection))
+
+
+- ##### `first` ([`Int`](../../references/scalars/int))
+
+
+
+
+- ##### `after` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `recentlyClaimedLoyaltyPointsRecords` ([`ClaimedLoyaltyPointsConnection`](../../references/objects/claimed-loyalty-points-connection))
+
+
+- ##### `spaceId` ([`Int`](../../references/scalars/int))
+
+
+
+
+- ##### `first` ([`Int`](../../references/scalars/int))
+
+
+
+
+- ##### `after` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `recentlyClaimedLoyaltyPointsSpaces` ([`SpaceConnection`](../../references/objects/space-connection))
+
+
+- ##### `first` ([`Int`](../../references/scalars/int))
+
+
+
+
+- ##### `after` ([`String`](../../references/scalars/string))
+
+
+
+
+- ##### `searchString` ([`String`](../../references/scalars/string))
 
 
 

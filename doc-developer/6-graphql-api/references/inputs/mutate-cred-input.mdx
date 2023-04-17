@@ -16,13 +16,24 @@ input MutateCredInput {
   referenceLink: String!
   credSource: CredSource!
   sourceFileUrl: String
+  synStatus: SyncStatus
+  credVersion: CredVersion
   credDiscordAMA: CredDiscordAMAInput
   credSnapshot: CredSnapshotInput
   credDiscordMember: CredDiscordMemberInput
+  credDiscordMessage: CredDiscordMessageInput
   credTwitter: CredTwitterInput
   credGraphQL: CredGraphQLInput
   credSubgraph: CredSubgraphInput
   credGoogleSheet: CredGoogleSheetInput
+  credCampaignNFTHolder: CredCampaignNFTHolderInput
+  credContractNFTHolder: CredContractNFTHolderInput
+  credGithubContributor: CredGithubContributorInput
+  credDynamicContractNFTHolder: CredDynamicContractNFTHolderInput
+  credDynamicCampaignNFTHolder: CredDynamicCampaignNFTHolderInput
+  credQuiz: CredQuizInput
+  curatorSpaceID: String!
+  multiDimensionCredConfig: MultiDimensionCredConfigInput
 }
 ```
 
@@ -69,6 +80,16 @@ input MutateCredInput {
 
 
 
+#### `synStatus` ([`SyncStatus`](../../references/enums/sync-status))
+
+
+
+
+#### `credVersion` ([`CredVersion`](../../references/enums/cred-version))
+
+
+
+
 #### `credDiscordAMA` ([`CredDiscordAMAInput`](../../references/inputs/cred-discord-amainput))
 
 
@@ -80,6 +101,11 @@ input MutateCredInput {
 
 
 #### `credDiscordMember` ([`CredDiscordMemberInput`](../../references/inputs/cred-discord-member-input))
+
+
+
+
+#### `credDiscordMessage` ([`CredDiscordMessageInput`](../../references/inputs/cred-discord-message-input))
 
 
 
@@ -100,6 +126,46 @@ input MutateCredInput {
 
 
 #### `credGoogleSheet` ([`CredGoogleSheetInput`](../../references/inputs/cred-google-sheet-input))
+
+
+
+
+#### `credCampaignNFTHolder` ([`CredCampaignNFTHolderInput`](../../references/inputs/cred-campaign-nftholder-input))
+
+
+
+
+#### `credContractNFTHolder` ([`CredContractNFTHolderInput`](../../references/inputs/cred-contract-nftholder-input))
+
+
+
+
+#### `credGithubContributor` ([`CredGithubContributorInput`](../../references/inputs/cred-github-contributor-input))
+
+
+
+
+#### `credDynamicContractNFTHolder` ([`CredDynamicContractNFTHolderInput`](../../references/inputs/cred-dynamic-contract-nftholder-input))
+
+
+
+
+#### `credDynamicCampaignNFTHolder` ([`CredDynamicCampaignNFTHolderInput`](../../references/inputs/cred-dynamic-campaign-nftholder-input))
+
+
+
+
+#### `credQuiz` ([`CredQuizInput`](../../references/inputs/cred-quiz-input))
+
+
+
+
+#### `curatorSpaceID` ([`String`](../../references/scalars/string))
+
+
+
+
+#### `multiDimensionCredConfig` ([`MultiDimensionCredConfigInput`](../../references/inputs/multi-dimension-cred-config-input))
 
 
 
