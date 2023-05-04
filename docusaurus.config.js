@@ -121,18 +121,9 @@ const config = {
             position: "left",
           },
           {
-            type: "doc",
-            docId: "dashboard-tutorial/introduction",
-            docsPluginId: "guides",
-            label: "Guides",
-            position: "left",
-          },
-          {
-            type: "doc",
-            docId: "introduction",
-            docsPluginId: "governance",
-            label: "Governance",
-            position: "left",
+            label: "Help Center",
+            href: "https://help.galxe.com",
+            position: "right",
           },
           {
             href: "https://galxe.com",
@@ -287,46 +278,6 @@ const config = {
           }
           // Link to GitHub for English docs
           return `https://github.com/GalxeHQ/galxe-docs/tree/main/doc-developer/${docPath}`;
-        },
-        showLastUpdateAuthor: false,
-        showLastUpdateTime: true,
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "guides",
-        path: "doc-guides",
-        routeBasePath: "guide",
-        sidebarPath: require.resolve("./sidebars.js"),
-        sidebarCollapsible: true,
-        editUrl: ({ locale, versionDocsDirPath, docPath }) => {
-          // Link to Crowdin for non-English docs
-          if (locale !== DefaultLocale) {
-            return `https://crowdin.com/project/docs_galaxy_eco/${locale}`;
-          }
-          // Link to GitHub for English docs
-          return `https://github.com/GalxeHQ/galxe-docs/tree/main/doc-guides/${docPath}`;
-        },
-        showLastUpdateAuthor: false,
-        showLastUpdateTime: true,
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "governance",
-        path: "doc-governance",
-        routeBasePath: "governance",
-        sidebarPath: require.resolve("./sidebars.js"),
-        sidebarCollapsible: true,
-        editUrl: ({ locale, versionDocsDirPath, docPath }) => {
-          // Link to Crowdin for non-English docs
-          if (locale !== DefaultLocale) {
-            return `https://crowdin.com/project/docs_galaxy_eco/${locale}`;
-          }
-          // Link to GitHub for English docs
-          return `https://github.com/GalxeHQ/galxe-docs/tree/main/doc-governance/${docPath}`;
         },
         showLastUpdateAuthor: false,
         showLastUpdateTime: true,
