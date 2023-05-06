@@ -38,10 +38,7 @@ query info($address: String!) {
     where: {
       recipient: $address
       block_gt: 1400000
-      token_in: [
-        "0x8f552a71EFE5eeFc207Bf75485b356A0b3f01eC9"
-        "0x1DC78Acda13a8BC4408B207c9E48CDBc096D95e0"
-        "0x30D2a9F5FDf90ACe8c17952cbb4eE48a55D916A7"
+      token_in: 
       ]
     }
   ) {
